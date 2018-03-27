@@ -10,9 +10,10 @@ The home page hides sensitive data unless you're logged in. The navbar also chan
 4. Navigate back to `example-simple-react`
 5. Run `yarn install`.
 6. `cd client`
-7. `cd ..`
-8. Run `yarn start` to run the server
-9. Create-react-app will start your express server and launch your browser to http://localhost:3000 for you.
+7. `yarn install`
+8. `cd ..`
+9. Run `yarn start` to run the server
+10. Create-react-app will start your express server and launch your browser to http://localhost:3000 for you.
 
 ## Highlights
 
