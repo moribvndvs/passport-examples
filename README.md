@@ -17,6 +17,7 @@ Here's what's inside:
 ### Examples
 
 - `example-simple`: A very simple Express server that uses Handlebars and basic form posts to authenticate users using the `passport-local` strategy. See the README in that folder for more info.
+- `example-simple-react`: A very simple express server that uses React and the `passport-local` strategy. This example also shows a way to ensure someone can't access a route unless they are logged in (see `/shared/middleware/mustBeLoggedIn.js`). This could actually be used in any express server using passport on any route.
 
 
 ## Miscellaneous
