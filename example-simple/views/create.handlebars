@@ -1,0 +1,31 @@
+<section class="section">
+  <h1>Create a New Account</h1>
+  <div class="row">
+    <form action="/create" method="POST">
+      {{#if flash}}
+      <div class="row">
+        <div class="input-field col s12">
+          <div class="card-panel red">{{flash}}</div>
+        </div>
+      </div>
+      {{/if}}
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="username" name="username" type="text" class="validate" required>
+          <label for="username">Username</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" name="password" type="password" class="validate" required>
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <button type="submit" class="waves-effect waves-light btn">Create Account</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

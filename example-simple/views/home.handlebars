@@ -1,0 +1,14 @@
+<section class="section">
+  {{#if user}}
+  Welcome back, {{user.username}}! Since you're logged in, you can see the secret stuff.
+
+  <ul class="collection">
+    <li class="collection-item">Bears</li>
+    <li class="collection-item">Beets</li>
+    <li class="collection-item">Battlestar Galactica</li>
+  </ul>
+  {{/if}}
+  {{#unless user}}
+  Hey! You have to log in to see secret stuff! Click "Log In" at the top.
+  {{/unless}}
+</section>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>PassportJS Simple Example</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  {{#if user}}
+    <ul id="presence" class="dropdown-content">
+      <li>
+        <a href="/logout">Log Out</a>
+      </li>
+    </ul>
+  {{/if}}
+  <nav>
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">PassportJS Example</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          {{#unless user}}
+          <li>
+            <a href="/login">Log In</a>
+          </li>
+          {{/unless}}
+          {{#if user}}
+            <li>
+              <a class="dropdown-trigger" href="#!" data-target="presence">
+                {{user.username}}
+                <i class="material-icons right">arrow_drop_down</i>
+              </a>
+            </li>
+          {{/if}}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    {{{body}}}
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+  <!-- Materialize JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $(".dropdown-trigger").dropdown();
+    });
+  </script>
+</body>
+
+</html>
