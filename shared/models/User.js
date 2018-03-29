@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
 // bcrypt is the hashing algorithm we'll use to protect stored credentials.
 // NEVER STORE PASSWORDS OR OTHER SENSITIVE DATA AS PLAIN TEXT!!!
 const bcrypt = require('bcrypt');
@@ -12,7 +14,7 @@ const bcrypt = require('bcrypt');
 // See: https://codahale.com/how-to-safely-store-a-password/
 const WORK_FACTOR = 10;
 
-const UserSchema = new mongoose.Schema({
+const UserSchema = new Schema({
   username: {
     type: String,
     required: true,

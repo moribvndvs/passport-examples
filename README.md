@@ -18,6 +18,7 @@ Here's what's inside:
 
 - `example-simple`: A very simple Express server that uses Handlebars and basic form posts to authenticate users using the `passport-local` strategy. See the README in that folder for more info.
 - `example-simple-react`: A very simple express server that uses React and the `passport-local` strategy. This example also shows a way to ensure someone can't access a route unless they are logged in (see `/shared/middleware/mustBeLoggedIn.js`). This could actually be used in any express server using passport on any route.
+- `example-social-media-react`: A refinement of the simple React app, but supports multiple social media logins in addition to username/password. As an added bonus, it shows how to use access tokens provided by the social media site's passport strategy to access the user's data from the social media site's API. In this example, users that log in via Spotify can retrieve their playlists, and likewise for Twitter users' tweets.
 
 
 ## Miscellaneous

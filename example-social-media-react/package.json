@@ -1,0 +1,34 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "Mern Demo",
+  "main": "server.js",
+  "scripts": {
+    "server": "node -r dotenv/config' server.js",
+    "client": "cd client && npm run start",
+    "start": "./node_modules/.bin/concurrently \"./node_modules/.bin/nodemon --exec 'node -r dotenv/config' server.js\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^5.0.1",
+    "express": "^4.15.4",
+    "express-session": "^1.15.6",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-spotify": "^1.0.0",
+    "passport-twitter": "^1.0.4",
+    "twitter": "^1.7.1"
+  }
+}
