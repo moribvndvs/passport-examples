@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Navbar from './components/Navbar';
+import ProtectedRoute from './components/ProtectedRoute';
 
 import { withUser, update } from './services/withUser';
 
@@ -14,6 +15,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import AuthFailedPage from './pages/AuthFailedPage';
 import TestSpotifyPage from './pages/TestSpotifyPage';
 import TestTwitterPage from './pages/TestTwitterPage';
+import MembersOnlyPage from './pages/MembersOnlyPage';
 
 class App extends Component {
   componentDidMount() {
@@ -49,6 +51,7 @@ class App extends Component {
               <Route exact path="/auth/failed" component={AuthFailedPage} />
               <Route exact path="/testspotify" component={TestSpotifyPage} />
               <Route exact path="/testtwitter" component={TestTwitterPage} />
+              <ProtectedRoute exact path="/membersonly" component={MembersOnlyPage} />
               <Route component={NotFoundPage} />
             </Switch>
           </Fragment>

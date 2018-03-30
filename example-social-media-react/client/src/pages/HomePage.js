@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import { List, ListItem } from 'material-ui/List';
 import { withUser } from '../services/withUser';
 
@@ -47,6 +48,13 @@ class HomePage extends Component {
         {!user &&
           <div>Hey! I don't recognize you! Register and log in using the link above</div>
         }
+
+        <p>
+          <Link to="/membersonly">
+            Click here
+          </Link> to go the members only area. If you are not logged in,
+          it'll redirect you to the login page.
+        </p>
       </Fragment>
     );
   }
