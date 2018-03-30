@@ -30,6 +30,9 @@ router.get('/auth/twitter/callback', passport.authenticate('twitter', {
   successRedirect: `${baseUrl}/testtwitter`, // tell it where to go if the log in successfully
 }));
 
+// Serve up static assets (usually on heroku)
+router.use(express.static("client/build"));
+
 // Send every request to the React app
 // Define any API or static HTML routes before this runs!
 router.get("*", function (req, res) {
